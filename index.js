@@ -13,9 +13,9 @@ const bodyParser = new BodyParser();
 //資料庫
 var mysql = require('mysql');
 var conn = mysql.createConnection({
-    host: '34.80.150.158',
-    user: 'root',
-    password: 'mp6_0204',
+    host: '',
+    user: '',
+    password: '',
     database: 'collection',
     port: 3306
 });
