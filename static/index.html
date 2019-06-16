@@ -1,0 +1,372 @@
+<html>
+
+<head>
+    <!--語言選擇-->
+    <meta charset="utf-8">
+    <!--符合每一個螢幕大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--讓IE符合標準版本-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--以下兩個為增加Goggle搜尋引擎的方方法:
+        1.description輸入關鍵字
+        2.author輸入作者-->
+    <meta name="description" content="作品集">
+    <meta name="author" content="XioaYun">
+
+    <title>XiaoYun作品集</title>
+
+    <!--========================================================================================-->
+    <!--Add Bootstrap 4.0CSS-->
+    <!--integrity目前僅 chrome、firefox 及 opera 有支援，用來檢驗載入的 script 是否經過第三方竄改。為安全性作提升。-->
+    <!--跨來源資源共用（Cross-Origin Resource Sharing，簡稱 CORS）機制提供了網頁伺服器跨網域的存取控制，增加跨網域資料傳輸的安全性。-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <!--Add My CSS-->
+    <link rel="stylesheet" href="content/css/css.css">
+    <!--增加vue來連動後端-->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!--將資料送至後端-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<!-- The scrollable area -->
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+    <section id="menu">
+        <!--nav說明網址:https://bootstrap.hexschool.com/docs/4.0/components/navbar/-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <!--svg:可縮放向量圖形-->
+                <img src="content/img/logo/logo.svg" height="30" class="d-inline-block align-top" alt="">
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Introduce">Introduce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Original">Original</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </section>
+    <header>
+        <div class="overlay">
+            <div class="container text-center">
+                <h1>XiaoYun</h1>
+                <h3>作品集</h3>
+            </div>
+        </div>
+    </header>
+
+    <!--section 用來作為一個有意義的章節，或段落的區隔。-->
+    <!--Introduce-->
+    <section id="Introduce" class="section-padded">
+        <div class="container">
+            <h2>Introduce</h2>
+            <div class="center">
+                <div class="km-space"></div>
+                <img src="./content/img/introduce/introduce_logo.png" alt="Khaki HTML Template">
+                <div class="km-space"></div>
+                <h5 class="lead">
+                    高中時期主要是學有關設計方面的科系，並對程式充滿憧憬，所以選擇就讀資訊工程系的數位創意組，平時對自己的未來也有所規劃，不喜歡上課遲到、翹課，對未來希望可以將自身在高中所學的技藝與未來大學學的知識結合必且運用。
+                </h5>
+
+            </div><!-- description text -->
+        </div>
+    </section>
+
+    <!--Experience-->
+    <section id="Experience" class="section-padded">
+        <div class="container">
+
+            <h2>Experience</h2>
+
+            <div class="row experience">
+                <div class="col-md-4">
+                    <div class="experience">
+                        <div class="icon-holder">
+                            <img src="./content/img/Experience/pencil.png" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">設計 </h4>
+                        <p class="description">平面設計<br>廣告設計<br>介面設計<br>使用者經驗設計</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="experience">
+                        <div class="icon-holder">
+                            <img src="./content/img/Experience/coding.png" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">程式</h4>
+                        <p class="description">前端<br>後端<br>人工智慧<br><br> </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="experience">
+                        <div class="icon-holder">
+                            <img src="./content/img/Experience/innovation.png" alt="" class="icon">
+                        </div>
+                        <h4 class="heading">創業</h4>
+                        <p class="description">農業資源整合平台<br>Tutor<br><br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cut cut-bottom"></div>
+    </section>
+
+
+    <!--Original-->
+    <section id="Original" class="section-padded">
+        <div class="container">
+            <h2>Original</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--GRID-->
+                    <div class="grid">
+                        <div class="grid-item">
+                            <div class="wrap-article">
+                                <img alt="original-1" class="img-circle text-center"
+                                    src="./content/img/orininal/hourglass.png">
+                                <p class="subtitle fancy">
+                                    <span>09/01/2015</span>
+                                </p>
+                                <a href="#">
+                                    <h3 class="title">
+                                        準備中
+                                    </h3>
+                                </a>
+                                <p class="content-original">
+                                    作品即將完成敬請期待
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <div class="wrap-article">
+                                <img alt="original-1" class="img-circle text-center"
+                                    src="./content/img/orininal/hourglass.png">
+                                <p class="subtitle fancy">
+                                    <span>09/01/2015</span>
+                                </p>
+                                <a href="#">
+                                    <h3 class="title">
+                                        準備中
+                                    </h3>
+                                </a>
+                                <p class="content-original">
+                                    作品即將完成，敬請期待
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid">
+                            <div class="grid-item">
+                                <div class="wrap-article">
+                                    <img alt="original-1" class="img-circle text-center"
+                                        src="./content/img/orininal/hourglass.png">
+                                    <p class="subtitle fancy">
+                                        <span>09/01/2015</span>
+                                    </p>
+                                    <a href="#">
+                                        <h3 class="title">
+                                            準備中
+                                        </h3>
+                                    </a>
+                                    <p class="content-original">
+                                        作品即將完成敬請期待
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="grid-item">
+                                    <div class="wrap-article">
+                                        <img alt="original-1" class="img-circle text-center"
+                                            src="./content/img/orininal/hourglass.png">
+                                        <p class="subtitle fancy">
+                                            <span>09/01/2015</span>
+                                        </p>
+                                        <a href="#">
+                                            <h3 class="title">
+                                                準備中
+                                            </h3>
+                                        </a>
+                                        <p class="content-original">
+                                            作品即將完成敬請期待
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="grid-item">
+                                        <div class="wrap-article">
+                                            <img alt="original-1" class="img-circle text-center"
+                                                src="./content/img/orininal/hourglass.png">
+                                            <p class="subtitle fancy">
+                                                <span>09/01/2015</span>
+                                            </p>
+                                            <a href="#">
+                                                <h3 class="title">
+                                                    準備中
+                                                </h3>
+                                            </a>
+                                            <p class="content-original">
+                                                作品即將完成敬請期待
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid">
+                                        <div class="grid-item">
+                                            <div class="wrap-article">
+                                                <img alt="original-1" class="img-circle text-center"
+                                                    src="./content/img/orininal/hourglass.png">
+                                                <p class="subtitle fancy">
+                                                    <span>09/01/2015</span>
+                                                </p>
+                                                <a href="#">
+                                                    <h3 class="title">
+                                                        準備中
+                                                    </h3>
+                                                </a>
+                                                <p class="content-original">
+                                                    作品即將完成敬請期待
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+    </section>
+
+    <!--Contact US-->
+    <section id="contact-us">
+        <div class="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 wow bounceInDown">
+                        <h2 class="section-title">Leave Your Feedback</h2>
+                        <p class="under-heading">Feel Free to text us</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <div class="container">
+                    <div id="app">
+                        <div class="row">
+
+                            <div class="col-md-6 wow bounceInLeft">
+
+                                <div class="form-group">
+                                    <input v-model="name" type="text" placeholder="Your Name"
+                                        class="form-control input-lg">
+                                </div>
+                                <div class="form-group">
+                                    <input v-model="email" type="text" placeholder="Your E - Mail"
+                                        class="form-control input-lg">
+                                </div>
+                                <div class="form-group">
+                                    <input v-model="subject" type="text" placeholder="Subject"
+                                        class="form-control input-lg">
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 wow bounceInRight">
+                                <div class="form-group">
+                                    <textarea v-model="message" placeholder="Your Message"
+                                        class="form-control "></textarea>
+                                </div>
+                                <button v-on:click="sendmessage" class="btn btn-primary btn-block input-lg">SEND
+                                    MESSAGE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="social-icons wow slideInDown">
+                                <ul class="list-unstyled">
+                                    <li><a href="#"><i class="fa fa-facebook fa-3x"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter fa-3x"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus fa-3x"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram fa-3x"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Contact US-->
+        <section id="footer">
+            <div class="footer-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="footer-text">Copyright <span class="copyright"> &copy;</span>2017</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="footer-text">Biking Theme</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="footer-text">Brought to you by <span class="usama"><a
+                                        href="https://www.facebook.com/UsamaElsayed90">Usama </a></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    message: '',
+                    name: '',
+                    email: '',
+                    subject: '',
+                },
+                methods: {
+                    sendmessage: function () {
+                        axios.post('/comments', {
+                            name: this.name,
+                            email: this.email,
+                            subject: this.subject,
+                            message: this.message
+                        })
+
+                    }
+                }
+            })
+        </script>
+
+</body>
+
+</html>
